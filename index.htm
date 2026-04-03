@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Health Education & First Aid | BA Physical Education Semester 4</title>
+
+<meta name="description" content="Complete syllabus of Health Education, First Aid, Safety Education and Disaster Management with structured interactive learning.">
+
+<meta property="og:title" content="Health Education Course">
+<meta property="og:description" content="Learn Health, First Aid, Safety & Disaster Management">
+<meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+
+/* HEADER */
+header{
+  background:#111;
+  color:#fff;
+  padding:10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* SIDEBAR */
+.sidebar{
+  position:fixed;
+  top:0;
+  left:-260px;
+  width:260px;
+  height:100%;
+  background:#222;
+  color:#fff;
+  overflow:auto;
+  transition:0.4s;
+  z-index:1000;
+}
+.sidebar.active{left:0}
+
+.unit{
+  padding:12px;
+  border-bottom:1px solid #444;
+  cursor:pointer;
+}
+.topic{
+  display:none;
+  padding-left:15px;
+}
+.topic p{
+  padding:6px;
+  color:#ccc;
+  cursor:pointer;
+}
+.topic p:hover{color:#fff}
+
+/* MAIN */
+main{padding:20px}
+
+/* CONTENT */
+#content{
+  background:#f4f4f4;
+  padding:15px;
+  border-radius:10px;
+  animation:fadeIn 0.4s;
+}
+
+/* BUTTON */
+button{
+  padding:10px;
+  margin:5px;
+  border:none;
+  background:#333;
+  color:#fff;
+  border-radius:6px;
+}
+
+/* SOCIAL */
+.social-cards{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:15px;
+}
+.social-cards a{
+  padding:10px 15px;
+  background:#eee;
+  border-radius:10px;
+  text-decoration:none;
+  color:#000;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:10px;
+  background:#111;
+  color:#fff;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  body{background:#f9fbff}
+}
+
+/* DESKTOP */
+@media(min-width:1200px){
+  body{background:#eef}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>Health Education</h1>
+  <button onclick="toggleSidebar()">☰</button>
+</header>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+
+<div class="unit" onclick="toggleUnit(this)">
+  Unit 1: Foundations of Health Education
+  <div class="topic">
+    <p onclick="navigate('u1t1')">Meaning & Definition</p>
+    <p onclick="navigate('u1t2')">Importance</p>
+    <p onclick="navigate('u1t3')">Role of Teacher</p>
+  </div>
+</div>
+
+<div class="unit" onclick="toggleUnit(this)">
+  Unit 2: First Aid
+  <div class="topic">
+    <p onclick="navigate('u2t1')">Meaning & Objectives</p>
+    <p onclick="navigate('u2t2')">Principles</p>
+    <p onclick="navigate('u2t3')">Types of Injuries</p>
+  </div>
+</div>
+
+<div class="unit" onclick="toggleUnit(this)">
+  Unit 3: Safety Education
+  <div class="topic">
+    <p onclick="navigate('u3t1')">Meaning</p>
+    <p onclick="navigate('u3t2')">Safety in Daily Life</p>
+  </div>
+</div>
+
+<div class="unit" onclick="toggleUnit(this)">
+  Unit 4: Disaster Management
+  <div class="topic">
+    <p onclick="navigate('u4t1')">Types of Disasters</p>
+    <p onclick="navigate('u4t2')">Emergency Response</p>
+  </div>
+</div>
+
+</div>
+
+<!-- MAIN -->
+<main>
+
+<section id="content"></section>
+
+<div>
+  <button onclick="prev()">⬅ Previous</button>
+  <button onclick="next()">Next ➡</button>
+</div>
+
+</main>
+
+<div class="social-cards">
+  <a href="#">YouTube</a>
+  <a href="#">GitHub</a>
+  <a href="#">LinkedIn</a>
+</div>
+
+<footer>
+  <p>© 2026 Health Education Course</p>
+</footer>
+
+<script>
+
+/* SIDEBAR */
+function toggleSidebar(){
+  sidebar.classList.toggle("active");
+}
+
+function toggleUnit(el){
+  let t=el.querySelector(".topic");
+  t.style.display=t.style.display==="block"?"none":"block";
+}
+
+/* CONTENT DATABASE */
+const content_db={
+
+u1t1:`<h2>Meaning & Definition</h2>
+<p>Health education is the process of educating people about health awareness, hygiene and healthy lifestyle.</p>`,
+
+u1t2:`<h2>Importance</h2>
+<p>Health education improves quality of life and prevents diseases.</p>`,
+
+u1t3:`<h2>Role of Physical Education Teacher</h2>
+<p>Teachers promote fitness, hygiene and discipline among students.</p>`,
+
+u2t1:`<h2>First Aid Meaning</h2>
+<p>Immediate care before professional medical help arrives.</p>`,
+
+u2t2:`<h2>Principles of First Aid</h2>
+<p>Check safety, call help, provide care and reassure victim.</p>`,
+
+u2t3:`<h2>Types of Injuries</h2>
+<p>Includes wounds, burns, fractures, bleeding, shock etc.</p>`,
+
+u3t1:`<h2>Safety Education</h2>
+<p>Education to prevent accidents and ensure safe environment.</p>`,
+
+u3t2:`<h2>Safety in Daily Life</h2>
+<p>Includes road safety, fire safety and home safety.</p>`,
+
+u4t1:`<h2>Types of Disasters</h2>
+<p>Natural and man-made disasters.</p>`,
+
+u4t2:`<h2>Emergency Response</h2>
+<p>Preparedness, evacuation and recovery strategies.</p>`
+};
+
+/* TOPIC ORDER */
+const topics=Object.keys(content_db);
+let index=0;
+
+/* RENDER */
+function render(id){
+  content.innerHTML=content_db[id];
+}
+
+/* NAVIGATION */
+function navigate(id){
+  index=topics.indexOf(id);
+  render(id);
+  history.pushState({id:id},"","?topic="+id);
+}
+
+/* NEXT / PREV */
+function next(){
+  index=(index+1)%topics.length;
+  navigate(topics[index]);
+}
+
+function prev(){
+  index=(index-1+topics.length)%topics.length;
+  navigate(topics[index]);
+}
+
+/* BACK BUTTON */
+window.onpopstate=e=>{
+  if(e.state) render(e.state.id);
+};
+
+/* DEFAULT LOAD (IMPORTANT) */
+render("u1t1");
+
+/* GESTURE */
+let startX=0;
+
+document.addEventListener("touchstart",e=>{
+  startX=e.touches[0].clientX;
+});
+
+document.addEventListener("touchend",e=>{
+  let endX=e.changedTouches[0].clientX;
+
+  if(startX<50 && endX>150) toggleSidebar();
+  if(startX>200 && endX<50) toggleSidebar();
+});
+
+</script>
+
+</body>
+</html>
