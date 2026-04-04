@@ -1,7 +1,10 @@
 {
   "name": "Health Education, First Aid Kit & Safety Measures | BA Physical Education Semester 4 (25PED401MV01)",
   "short_name": "Physical Education",
-  "start_url": "https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/",
+
+  "start_url": "/PhysicalEducationMICSemester-4UGPGCourse/index.htm?source=pwa",
+  "scope": "/PhysicalEducationMICSemester-4UGPGCourse/",
+
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#111111",
@@ -24,38 +27,68 @@
     {
       "name": "Health Education Basics",
       "short_name": "Unit 1",
-      "url": "https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse?topic=u1t1",
-      "icons": [{ "src": "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-192.png", "sizes": "192x192" }]
+      "url": "/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u1t1",
+      "icons": [
+        {
+          "src": "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "First Aid Principles",
       "short_name": "First Aid",
-      "url": "https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse?topic=u2t2",
-      "icons": [{ "src": "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-192.png", "sizes": "192x192" }]
+      "url": "/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u2t2",
+      "icons": [
+        {
+          "src": "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Injury Treatment",
       "short_name": "Injuries",
-      "url": "https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse?topic=u2t3",
-      "icons": [{ "src": "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-192.png", "sizes": "192x192" }]
+      "url": "/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u2t3",
+      "icons": [
+        {
+          "src": "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Daily Safety",
       "short_name": "Safety",
-      "url": "https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse?topic=u3t2",
-      "icons": [{ "src": "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-192.png", "sizes": "192x192" }]
+      "url": "/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u3t2",
+      "icons": [
+        {
+          "src": "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Disaster Types",
       "short_name": "Disaster",
-      "url": "https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse?topic=u4t1",
-      "icons": [{ "src": "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-192.png", "sizes": "192x192" }]
+      "url": "/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u4t1",
+      "icons": [
+        {
+          "src": "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Emergency Response",
       "short_name": "Emergency",
-      "url": "https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse?topic=u4t2",
-      "icons": [{ "src": "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-192.png", "sizes": "192x192" }]
+      "url": "/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u4t2",
+      "icons": [
+        {
+          "src": "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }

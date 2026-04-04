@@ -38,17 +38,13 @@ function prev(){
 
 /* ---------------- LOAD FROM URL ---------------- */
 function loadFromURL(){
-
   const params = new URLSearchParams(window.location.search);
   const topic = params.get("topic");
 
   if(topic && content_db[topic]){
-    index = topics.indexOf(topic);
     render(topic);
   } else {
-    // DEFAULT (IMPORTANT FOR SEO)
-    index = 0;
-    render(topics[0]); // u1t1
+    render("u1t1");
   }
 }
 

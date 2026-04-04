@@ -61,13 +61,20 @@ self.addEventListener("fetch", event => {
 });
 
 /* ACTIVATE */
-self.addEventListener("activate", event => {
-  event.waitUntil(
-    caches.keys().then(keys => {
-      return Promise.all(
-        keys.filter(key => key !== CACHE_NAME)
-            .map(key => caches.delete(key))
-      );
-    })
+self.addEventListener("fetch", event => {
+
+  const url = new URL(event.request.url);
+
+  // ✅ Handle all app navigation (including shortcuts)
+  if (url.pathname.includes("PhysicalEducationMICSemester-4UGPGCourse")) {
+    event.respondWith(
+      caches.match("/PhysicalEducationMICSemester-4UGPGCourse/index.htm")
+        .then(res => res || fetch("/PhysicalEducationMICSemester-4UGPGCourse/index.htm"))
+    );
+    return;
+  }
+
+  event.respondWith(
+    caches.match(event.request).then(res => res || fetch(event.request))
   );
 });
