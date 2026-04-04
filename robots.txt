@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Allow important assets
+Allow: /assets/
+Allow: /content/
+
+# Disallow unnecessary or duplicate paths (if any in future)
+Disallow: /private/
+Disallow: /temp/
+
+# Sitemap location
+Sitemap: https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/sitemap.xml

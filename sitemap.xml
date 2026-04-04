@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- UNIT 1 -->
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u1t1</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u1t2</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u1t3</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- UNIT 2 -->
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u2t1</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u2t2</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u2t3</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u2t4</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- UNIT 3 -->
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u3t1</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u3t2</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u3t3</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u3t4</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- UNIT 4 -->
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u4t1</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u4t2</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u4t3</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/?topic=u4t4</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
