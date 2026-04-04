@@ -1,0 +1,107 @@
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+
+/* HEADER */
+header{
+  background:#111;
+  color:#fff;
+  padding:10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* SIDEBAR */
+.sidebar{
+  position:fixed;
+  top:0;
+  left:-320px;
+  width:320px;
+  height:100%;
+  background:#222;
+  color:#fff;
+  overflow:auto;
+  transition:0.4s;
+  z-index:1000;
+}
+.sidebar.active{left:0}
+
+.unit{
+  padding:12px;
+  border-bottom:1px solid #444;
+  cursor:pointer;
+}
+.topic{
+  display:none;
+  padding-left:15px;
+}
+.topic p{
+  font-size: 12px;
+  padding:6px;
+  color:#ccc;
+  cursor:pointer;
+}
+.topic p:hover{color:#fff}
+
+/* MAIN */
+main{padding:20px}
+
+/* CONTENT */
+#content{
+  background:#f4f4f4;
+  padding:15px;
+  border-radius:10px;
+  animation:fadeIn 0.4s;
+}
+
+/* BUTTON */
+button{
+  padding:10px;
+  margin:5px;
+  border:none;
+  background:#333;
+  color:#fff;
+  border-radius:6px;
+}
+
+/* SOCIAL */
+.social-cards{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:15px;
+}
+.social-cards a{
+  padding:10px 15px;
+  background:#eee;
+  border-radius:10px;
+  text-decoration:none;
+  color:#000;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:10px;
+  background:#111;
+  color:#fff;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  body{background:#f9fbff}
+  header h1{
+    font-size: 14px;
+  }
+}
+
+/* DESKTOP */
+@media(min-width:1200px){
+  body{background:#eef}
+}
