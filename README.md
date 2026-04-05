@@ -169,6 +169,43 @@ PhysicalEducationMICSemester-4UGPGCourse/
 
 ---
 
+## 📚 📌 Direct Topic Access (Deep Links)
+
+### 🟢 Unit 1: Foundations of Health Education
+
+* 🔗 [Meaning & Definition](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u1t1)
+* 🔗 [Importance of Health Education](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u1t2)
+* 🔗 [Role of Physical Education Teacher](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u1t3)
+
+---
+
+### 🔵 Unit 2: Introduction to First Aid
+
+* 🔗 [Meaning, Objectives & Importance](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u2t1)
+* 🔗 [Principles of First Aid](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u2t2)
+* 🔗 [Types of Injuries](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u2t3)
+* 🔗 [First Aid Kit](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u2t4)
+
+---
+
+### 🟡 Unit 3: Safety Education
+
+* 🔗 [Meaning & Need](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u3t1)
+* 🔗 [Safety in Daily Life](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u3t2)
+* 🔗 [Fire, Road & Water Safety](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u3t3)
+* 🔗 [Safety Signs & Symbols](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u3t4)
+
+---
+
+### 🔴 Unit 4: Disaster Management
+
+* 🔗 [Types of Disasters](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u4t1)
+* 🔗 [Disaster Management Principles](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u4t2)
+* 🔗 [Evacuation Procedures](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u4t3)
+* 🔗 [Emergency Communication](https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/index.htm?topic=u4t4)
+
+---
+
 ## 🔮 Future Enhancements
 
 * 📊 Progress Tracking Dashboard (IndexedDB)
