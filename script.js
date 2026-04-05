@@ -64,7 +64,82 @@ function render(id){
   if(content_db[id]){
     document.getElementById("content").innerHTML = content_db[id];
 
-    // Dynamic title
-    document.title = document.querySelector("#content h2").innerText + " | Health Education";
+    // 🔥 Auto scroll to top (smooth)
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+    // Dynamic title (SEO)
+    document.title = document.querySelector("#content h2")?.innerText + " | Health Education , First Aid Kit & Safety Measures | BA Physical Education Semester 4 (25PED401MV01)";
   }
+}
+
+/* ---------------- UNIVERSAL SIDEBAR SWIPE ---------------- */
+
+const sidebar = document.getElementById("sidebar");
+
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
+
+/* -------- START (TOUCH + MOUSE) -------- */
+function start(e){
+  isDragging = true;
+  startX = e.touches ? e.touches[0].clientX : e.clientX;
+}
+
+/* -------- MOVE -------- */
+function move(e){
+  if(!isDragging) return;
+
+  currentX = e.touches ? e.touches[0].clientX : e.clientX;
+  let diff = currentX - startX;
+
+  // OPEN (from left edge only)
+  if(startX < 50 && diff > 60){
+    sidebar.classList.add("active");
+  }
+
+  // CLOSE
+  if(diff < -60){
+    sidebar.classList.remove("active");
+  }
+}
+
+/* -------- END -------- */
+function end(){
+  isDragging = false;
+}
+
+/* -------- TOUCH EVENTS -------- */
+document.addEventListener("touchstart", start);
+document.addEventListener("touchmove", move);
+document.addEventListener("touchend", end);
+
+/* -------- MOUSE EVENTS (DESKTOP SUPPORT) -------- */
+document.addEventListener("mousedown", start);
+document.addEventListener("mousemove", move);
+document.addEventListener("mouseup", end);
+
+const overlay = document.getElementById("overlay");
+
+function openSidebar(){
+  sidebar.classList.add("active");
+  overlay.classList.add("active");
+}
+
+function closeSidebar(){
+  sidebar.classList.remove("active");
+  overlay.classList.remove("active");
+}
+
+overlay.addEventListener("click", closeSidebar);
+
+if(startX < 50 && diff > 60){
+  openSidebar();
+}
+
+if(diff < -60){
+  closeSidebar();
 }
