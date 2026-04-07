@@ -17,6 +17,7 @@ function navigate(id){
   index = topics.indexOf(id);
 
   render(id);
+  toggleSidebar();
 
   // Update URL without reload
   history.pushState({id:id}, "", "?topic=" + id);
@@ -71,7 +72,7 @@ function render(id){
     });
 
     // Dynamic title (SEO)
-    document.title = document.querySelector("#content h2")?.innerText + " | Health Education , First Aid Kit & Safety Measures | BA Physical Education Semester 4 (25PED401MV01)";
+    document.title = document.querySelector("#content h2")?.innerText + " | Health Education";
   }
 }
 
