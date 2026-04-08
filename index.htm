@@ -65,6 +65,24 @@
 <!-- PERFORMANCE -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <script>
+(function () {
+  const url = new URL(window.location.href);
+  const topic = url.searchParams.get("topic");
+
+  // Check if topic = u1t1
+  if (topic === "u1t1") {
+    // Build homepage URL (remove index.htm + params)
+    let cleanURL = url.origin + url.pathname;
+
+    // Remove 'index.htm' if present
+    cleanURL = cleanURL.replace(/index\.htm$/, "");
+
+    // Redirect silently
+    window.location.replace(cleanURL);
+  }
+})();
+</script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const url = window.location.href;
   let link = document.querySelector("link[rel='canonical']");

@@ -17,7 +17,7 @@ function navigate(id){
   index = topics.indexOf(id);
 
   render(id);
-  toggleSidebar();
+  closeSidebar();
 
   // Update URL without reload
   history.pushState({id:id}, "", "?topic=" + id);
@@ -143,4 +143,4 @@ if(startX < 50 && diff > 60){
 
 if(diff < -60){
   closeSidebar();
-}
+}      
