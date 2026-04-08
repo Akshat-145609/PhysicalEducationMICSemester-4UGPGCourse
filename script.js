@@ -143,4 +143,8 @@ if(startX < 50 && diff > 60){
 
 if(diff < -60){
   closeSidebar();
-}      
+}  
+
+function visitHome(){
+  window.location.href = "https://akshat-881236.github.io/AkshatNetworkHub/HealthEducationFirstAidKitandSafetyEducation.htm";
+}
