@@ -3,6 +3,9 @@ const CACHE_NAME = "health-edu-v2";
 const urlsToCache = [
   "/",
   "https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/",
+  "index.htm",
+  "https://medium.com/@its.akshatnetworkhub23",
+  "https://fonts.googleapis.com/css2?family=Poppins&display=swap",
   "style.css",
   "pwa.js",
   "database.js",
