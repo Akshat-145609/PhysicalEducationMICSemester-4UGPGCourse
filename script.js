@@ -148,3 +148,20 @@ if(diff < -60){
 function visitHome(){
   window.location.href = "https://akshat-881236.github.io/AkshatNetworkHub/HealthEducationFirstAidKitandSafetyEducation.htm";
 }
+
+/* Close another sidebar unit topics when another is opened */
+function toggleUnit(element){
+  const allUnits = document.querySelectorAll(".unit .topic"); 
+  allUnits.forEach(unit => {
+    if(unit !== element.querySelector(".topic")){
+      unit.style.display = "none";
+    }
+  });
+
+  const topic = element.querySelector(".topic");
+  if(topic.style.display === "block"){
+    topic.style.display = "none";
+  } else {
+    topic.style.display = "block";
+  }
+}
