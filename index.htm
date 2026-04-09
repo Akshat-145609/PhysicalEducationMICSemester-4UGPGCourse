@@ -81,6 +81,26 @@
     window.location.replace(cleanURL);
   }
 })();
+
+/* Call above function after each 8 seconds */
+
+setInterval(() => {
+  const url = new URL(window.location.href);
+  const topic = url.searchParams.get("topic");
+
+  // Check if topic = u1t1
+  if (topic === "u1t1") {
+    // Build homepage URL (remove index.htm + params)
+    let cleanURL = url.origin + url.pathname;
+
+    // Remove 'index.htm' if present
+    cleanURL = cleanURL.replace(/index\.htm$/, "");
+
+    // Redirect silently
+    window.location.replace(cleanURL);
+  }
+}, 8000);
+
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
