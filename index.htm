@@ -45,6 +45,176 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+
+    {
+      "@type": "Question",
+      "name": "What is Health Education?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Health education is the process of improving knowledge, attitudes, and practices related to health. It helps individuals maintain a healthy lifestyle and prevent diseases."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What are the objectives of Health Education?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The objectives of health education include promoting healthy habits, preventing diseases, improving quality of life, and creating awareness about hygiene and safety in society."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Why is Health Education important in schools and communities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Health education is important because it builds awareness about personal hygiene, nutrition, and disease prevention. It helps students and communities lead a healthier and more productive life."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What is First Aid and why is it important?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First aid is the immediate care given to an injured or ill person before professional medical help arrives. It is important because it can save lives, reduce pain, and prevent the condition from worsening."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What are the principles of First Aid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The principles of first aid include preserving life, preventing further injury, promoting recovery, and providing reassurance to the injured person."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What are the qualities of a first aider?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A first aider should be calm, confident, knowledgeable, quick in decision-making, and capable of handling emergencies effectively."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What types of injuries are covered in First Aid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First aid covers injuries such as wounds, fractures, burns, sprains, bleeding, shock, choking, and unconsciousness."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What items are included in a First Aid Kit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A first aid kit includes bandages, antiseptic solutions, cotton, gauze, scissors, gloves, pain relievers, and other essential medical supplies."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What is Safety Education in daily life?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Safety education involves understanding and practicing measures to prevent accidents and injuries in daily life, including at home, school, playground, and during sports."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What are the types of safety covered in the syllabus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The syllabus covers home safety, school safety, playground safety, fire safety, road safety, and water safety guidelines."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What is Disaster Management?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Disaster management is the process of preparing for, responding to, and recovering from disasters, including both natural and man-made events."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What are the types of disasters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Disasters are classified into natural disasters such as earthquakes and floods, and man-made disasters such as industrial accidents and fires."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What are the principles of Disaster Management?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The principles include preparedness, response, recovery, and mitigation to minimize the impact of disasters."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What are emergency evacuation procedures?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Emergency evacuation procedures involve safely exiting a dangerous area using planned routes and following instructions during drills or real emergencies."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What is the exam pattern for this course?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The exam consists of nine questions in total. Students must attempt five questions, including one compulsory question with short answers. The remaining questions are long-answer type, with equal marks."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "What are the Course Learning Outcomes (CLOs)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Students will understand health education principles, identify injuries and provide first aid, apply preventive health measures, and assess safety hazards in daily life."
+      },
+
+      {
+        "@type": "Question",
+        "name": "What are the Unit Learning Outcomes (ULOs)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unit 1: Define health education and its importance. Unit 2: Describe first aid principles and common injuries. Unit 3: Identify safety measures in various environments. Unit 4: Explain disaster management concepts and procedures."
+        },
+
+        {
+          "@type": "Question",
+          "name": "What are the Topic Learning Outcomes (TLOs)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TLOs include understanding health education objectives, recognizing first aid techniques, applying safety guidelines, and comprehending disaster management strategies."
+          }
+        }
+    }
+
+  ]
+}
+</script>
 <!-- BREADCRUMB SCHEMA -->
 <script type="application/ld+json">
 {
@@ -65,23 +235,6 @@
 <!-- PERFORMANCE -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <script>
-(function () {
-  const url = new URL(window.location.href);
-  const topic = url.searchParams.get("topic");
-
-  // Check if topic = u1t1
-  if (topic === "u1t1") {
-    // Build homepage URL (remove index.htm + params)
-    let cleanURL = url.origin + url.pathname;
-
-    // Remove 'index.htm' if present
-    cleanURL = cleanURL.replace(/index\.htm$/, "");
-
-    // Redirect silently
-    window.location.replace(cleanURL);
-  }
-})();
-
 /* Call above function after each 8 seconds */
 
 setInterval(() => {

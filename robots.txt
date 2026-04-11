@@ -1,13 +1,57 @@
 User-agent: *
+
+# ========================
+# CORE ACCESS
+# ========================
 Allow: /
 
-# Allow important assets
-Allow: /assets/
-Allow: /content/
+# Allow essential rendering resources
+Allow: /PhysicalEducationMICSemester-4UGPGCourse/Assets/
+Allow: /PhysicalEducationMICSemester-4UGPGCourse/content/
 
-# Disallow unnecessary or duplicate paths (if any in future)
+# ========================
+# SPA PARAM CONTROL
+# ========================
+
+# Allow only valid topic param pattern (broad allow)
+Allow: /*?topic=
+
+# Block all other query parameters (except topic)
+Disallow: /*?*=
+Disallow: /*?topic=&*
+
+# Allow valid topic URLs again (override block)
+Allow: /*?topic=u1t1
+Allow: /*?topic=u1t2
+Allow: /*?topic=u1t3
+Allow: /*?topic=u2t1
+Allow: /*?topic=u2t2
+Allow: /*?topic=u2t3
+Allow: /*?topic=u2t4
+Allow: /*?topic=u3t1
+Allow: /*?topic=u3t2
+Allow: /*?topic=u3t3
+Allow: /*?topic=u3t4
+Allow: /*?topic=u4t1
+Allow: /*?topic=u4t2
+Allow: /*?topic=u4t3
+Allow: /*?topic=u4t4
+
+# ========================
+# BLOCK JUNK / DUPLICATES
+# ========================
+Disallow: /*?*utm_
+Disallow: /*?*ref=
+Disallow: /*?*session=
+Disallow: /*?*fbclid=
+
+# ========================
+# SENSITIVE PATHS
+# ========================
 Disallow: /private/
 Disallow: /temp/
 
-# Sitemap location
+# ========================
+# SITEMAP
+# ========================
 Sitemap: https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/sitemap.xml

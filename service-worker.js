@@ -1,21 +1,23 @@
-const CACHE_NAME = "health-edu-v2";
+const CACHE_NAME = "health-edu-v3";
+
+const BASE = "/PhysicalEducationMICSemester-4UGPGCourse/";
 
 const urlsToCache = [
-  "/",
-  "https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/",
-  "index.htm",
-  "https://medium.com/@its.akshatnetworkhub23",
-  "https://fonts.googleapis.com/css2?family=Poppins&display=swap",
-  "style.css",
-  "pwa.js",
-  "database.js",
-  "script.js",
-  "robots.txt",
-  "`manifest.json",
-  "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-192.png",
-  "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-512.png",
-  "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-48.png",
-  "/PhysicalEducationMICSemester-4UGPGCourse/Assets/icons/PE_icon-32.png"
+  BASE,
+  BASE + "index.htm",
+  BASE + "style.css",
+  BASE + "script.js",
+  BASE + "database.js",
+  BASE + "pwa.js",
+  BASE + "manifest.json",
+  BASE + "robots.txt",
+  BASE + "404.htm",
+
+  // Icons
+  BASE + "Assets/icons/PE_icon-192.png",
+  BASE + "Assets/icons/PE_icon-512.png",
+  BASE + "Assets/icons/PE_icon-48.png",
+  BASE + "Assets/icons/PE_icon-32.png"
 ];
 
 /* INSTALL */
@@ -23,7 +25,21 @@ self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
+      .catch(err => console.log("Cache failed:", err))
   );
+  self.skipWaiting();
+});
+
+/* ACTIVATE */
+self.addEventListener("activate", event => {
+  event.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(
+        keys.map(key => key !== CACHE_NAME && caches.delete(key))
+      )
+    )
+  );
+  self.clients.claim();
 });
 
 /* FETCH */
@@ -31,53 +47,31 @@ self.addEventListener("fetch", event => {
 
   const url = new URL(event.request.url);
 
-  // ✅ Handle SPA routing (?topic=)
-  if (url.pathname.endsWith("index.htm") || url.pathname === "/") {
+  // ✅ Handle SPA navigation (including ?topic=)
+  if (event.request.mode === "navigate") {
     event.respondWith(
-      caches.match("/index.htm")
-        .then(response => response || fetch("/index.htm"))
+      caches.match(BASE + "index.htm")
+        .then(res => res || fetch(BASE + "index.htm"))
     );
     return;
   }
 
-  // ✅ Ignore query params for caching
-  const cleanRequest = new Request(url.origin + url.pathname);
-
+  // ✅ Cache-first for assets
   event.respondWith(
-    caches.match(cleanRequest)
-      .then(response => {
-        return response || fetch(event.request)
-          .then(networkResponse => {
-            return caches.open(CACHE_NAME).then(cache => {
-              cache.put(cleanRequest, networkResponse.clone());
-              return networkResponse;
-            });
-          })
-          .catch(() => {
-            // fallback
-            if (event.request.destination === "document") {
-              return caches.match("/index.htm");
-            }
+    caches.match(event.request)
+      .then(res => res || fetch(event.request)
+        .then(networkRes => {
+          return caches.open(CACHE_NAME).then(cache => {
+            cache.put(event.request, networkRes.clone());
+            return networkRes;
           });
+        })
+      )
+      .catch(() => {
+        // fallback for offline
+        if (event.request.destination === "document") {
+          return caches.match(BASE + "404.htm");
+        }
       })
-  );
-});
-
-/* ACTIVATE */
-self.addEventListener("fetch", event => {
-
-  const url = new URL(event.request.url);
-
-  // ✅ Handle all app navigation (including shortcuts)
-  if (url.pathname.includes("PhysicalEducationMICSemester-4UGPGCourse")) {
-    event.respondWith(
-      caches.match("/PhysicalEducationMICSemester-4UGPGCourse/index.htm")
-        .then(res => res || fetch("/PhysicalEducationMICSemester-4UGPGCourse/index.htm"))
-    );
-    return;
-  }
-
-  event.respondWith(
-    caches.match(event.request).then(res => res || fetch(event.request))
   );
 });

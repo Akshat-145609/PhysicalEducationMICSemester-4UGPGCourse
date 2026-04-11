@@ -1,3 +1,61 @@
+function injectSchema(topicData) {
+
+  const oldSchema = document.getElementById("dynamic-schema");
+  if (oldSchema) oldSchema.remove();
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": topicData.title,
+    "description": topicData.description,
+    "url": window.location.href,
+    "author": {
+      "@type": "Person",
+      "name": "Akshat Network Hub"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Akshat Network Hub"
+    },
+    "dateModified": new Date().toISOString()
+  };
+
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.id = "dynamic-schema";
+  script.textContent = JSON.stringify(schema);
+
+  document.head.appendChild(script);
+}
+
+function injectBreadcrumb(topicName) {
+
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://akshat-145609.github.io/PhysicalEducationMICSemester-4UGPGCourse/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": topicName,
+        "item": window.location.href
+      }
+    ]
+  };
+
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(breadcrumb);
+
+  document.head.appendChild(script);
+}
+
 /* SIDEBAR */
 function toggleSidebar(){
   sidebar.classList.toggle("active");
@@ -423,5 +481,122 @@ Rumors spread rapidly in emergencies from fear and uncertainty. Early accurate i
 Language barriers prevent communication with non-native speakers. Translation services and materials. Interpretation at public briefings. Community health workers as translators. Visual aids reducing reliance on language. Literacy barriers prevent comprehension of written information. Simple language and short sentences. Visual communication using pictures and symbols. Verbal communication and demonstrations. Audio messages. Technology barriers prevent access to modern communication systems. Radio reaches those without electricity or internet. Landline phones accessible to elderly. Community gathering places for information. Door-to-door notification. Distrust of authorities reduces compliance with messaging. Transparent communication building trust. Engagement with community leaders. Involvement of trusted individuals in communication. Acknowledgment of legitimate grievances. Sensory impairments prevent access to information. Large print for those with visual impairment. Audio descriptions for those who cannot read. Sign language for those with hearing impairment. Tactile information. Information access during communication system outages. Backup power for radio and television. Satellite phones when cell towers are down. Ham radio operators. Runners and messengers. Psychological factors affecting communication. Fear and anxiety reduce information processing. Keeping messages simple during high stress. Repetition to ensure understanding. Multiple channels to reach all. Panic reduces rational decision-making. Calm tone and confident messaging. Information about what authorities are doing. Reassurance about available assistance. Fatigue of responders and public. Regular breaks for responders. Rotation of communication staff. Spacing of briefings to prevent information overload.
 </li>
 </ul>`,
+};
+
+const FAQ_DB = {
+
+  // ================= UNIT 1 =================
+  "u1t1": [
+    {
+      q: "What is Health Education?",
+      a: "Health education is the process of improving knowledge, attitudes, and practices related to health."
+    },
+    {
+      q: "What are the objectives of Health Education?",
+      a: "The objectives include promoting healthy habits, disease prevention, and improving quality of life."
+    }
+  ],
+
+  "u1t2": [
+    {
+      q: "Why is Health Education important?",
+      a: "It helps individuals understand hygiene, nutrition, and disease prevention for a healthy life."
+    }
+  ],
+
+  // ================= UNIT 2 =================
+  "u2t1": [
+    {
+      q: "What is First Aid?",
+      a: "First aid is immediate care given before professional medical help arrives."
+    },
+    {
+      q: "Why is First Aid important?",
+      a: "It can save lives, reduce injury severity, and stabilize patients."
+    }
+  ],
+
+  "u2t2": [
+    {
+      q: "What are the principles of First Aid?",
+      a: "Preserve life, prevent worsening, promote recovery, and provide reassurance."
+    },
+    {
+      q: "What qualities should a first aider have?",
+      a: "Calmness, confidence, quick decision-making, and knowledge."
+    }
+  ],
+
+  // ================= UNIT 3 =================
+  "u3t2": [
+    {
+      q: "What is Safety Education?",
+      a: "It teaches preventive measures to avoid accidents in daily life."
+    },
+    {
+      q: "Where is safety education applied?",
+      a: "At home, school, playground, sports, roads, and water environments."
+    }
+  ],
+
+  // ================= UNIT 4 =================
+  "u4t1": [
+    {
+      q: "What is Disaster Management?",
+      a: "It involves preparedness, response, and recovery from disasters."
+    }
+  ],
+
+  "u4t2": [
+    {
+      q: "What are emergency response procedures?",
+      a: "They include evacuation, communication, and safety drills during emergencies."
+    }
+  ]
 
 };
+
+function generateFAQSchema(topic) {
+
+  const faqs = FAQ_DB[topic];
+
+  // ❌ If no FAQ → skip
+  if (!faqs || faqs.length === 0) return;
+
+  // Remove old schema
+  const old = document.getElementById("faq-schema");
+  if (old) old.remove();
+
+  // Convert to schema format
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  };
+
+  // Inject schema
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.id = "faq-schema";
+  script.textContent = JSON.stringify(schema);
+
+  document.head.appendChild(script);
+}
+
+function initFAQ() {
+  const params = new URLSearchParams(window.location.search);
+  const topic = params.get("topic");
+
+  if (topic) {
+    generateFAQSchema(topic);
+  }
+}
+
+initFAQ();

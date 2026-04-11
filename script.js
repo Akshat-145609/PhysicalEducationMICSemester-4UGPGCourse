@@ -21,8 +21,6 @@ function navigate(id){
 
   // Update URL without reload
   history.pushState({id:id}, "", "?topic=" + id);
-
-  saveProgress(id);
 }
 
 /* ---------------- NEXT ---------------- */
@@ -37,7 +35,7 @@ function prev(){
   navigate(topics[index]);
 }
 
-/* ---------------- LOAD FROM URL ---------------- */
+/* ---------------- LOAD FROM URL ---------------- but checking if topic is valid or not */
 function loadFromURL(){
   const params = new URLSearchParams(window.location.search);
   const topic = params.get("topic");
@@ -45,7 +43,7 @@ function loadFromURL(){
   if(topic && content_db[topic]){
     render(topic);
   } else {
-    render("u1t1");
+    render(topics[0]); // Default to first topic
   }
 }
 
@@ -165,3 +163,16 @@ function toggleUnit(element){
     topic.style.display = "block";
   }
 }
+
+setTimeout(() => {
+  const card = document.createElement("div");
+  card.className = "auto-card";
+  card.innerText = "Time's up! Moving to next topic.";
+  document.body.appendChild(card);
+
+  // Auto hide the card after 3 seconds
+  setTimeout(() => {
+    document.body.removeChild(card);
+    next();
+  }, 3000);
+}, 180000);
