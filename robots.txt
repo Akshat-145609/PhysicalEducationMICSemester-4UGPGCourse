@@ -36,6 +36,10 @@ Allow: /*?topic=u4t1
 Allow: /*?topic=u4t2
 Allow: /*?topic=u4t3
 Allow: /*?topic=u4t4
+Allow: /*?topic=u1qa
+Allow: /*?topic=u2qa
+Allow: /*?topic=u3qa
+Allow: /*?topic=u4qa
 
 # ========================
 # BLOCK JUNK / DUPLICATES

@@ -41,3 +41,15 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+# Define 404.htm already created in same repository for GitHub Pages
+# This step is optional and can be removed if you do not want a custom 404 page
+
+      - name: Upload 404 page
+        uses: actions/upload-pages-artifact@v3
+        with: 
+          path: '404.htm'
+      - name: Deploy 404 page
+        id: deployment-404
+        uses: actions/deploy-pages@v5
+
