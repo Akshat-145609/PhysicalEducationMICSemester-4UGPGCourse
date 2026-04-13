@@ -895,7 +895,27 @@ Disaster preparedness and response are critical components of community safety a
 
 <ul><li><strong>Discuss the role of NDMA in disaster management.</strong><br>
 <p><span style="color:blue;"><strong>Role of NDMA in Disaster Management:</strong></span><br>
-The National Disaster Management Authority (NDMA) plays a crucial role in disaster management by formulating policies, plans, and guidelines for disaster preparedness, response, and recovery. It coordinates with various government agencies, state disaster management authorities, and other stakeholders to ensure effective implementation of disaster management strategies. The NDMA is responsible for conducting training programs, raising awareness about disaster risks, and facilitating the development of early warning systems. Additionally, the NDMA oversees the allocation of resources during disasters and provides technical support to affected regions to enhance their resilience and recovery efforts.</p></li>
+The National Disaster Management Authority (NDMA) plays a crucial role in disaster management by formulating policies, plans, and guidelines for disaster preparedness, response, and recovery. It coordinates with various government agencies, state disaster management authorities, and other stakeholders to ensure effective implementation of disaster management strategies. The NDMA is responsible for conducting training programs, raising awareness about disaster risks, and facilitating the development of early warning systems. Additionally, the NDMA oversees the allocation of resources during disasters and provides technical support to affected regions to enhance their resilience and recovery efforts.</p>
+<p><span style="color:blue;"><strong>Role of NDMA includes:</strong></span><br>
+<ol>
+<li><strong>Policy Formulation:</strong><br>
+The NDMA formulates national policies and guidelines for disaster management, ensuring a coordinated and comprehensive approach to disaster risk reduction and response.</li>
+<li><strong>Coordination:</strong><br>
+The NDMA coordinates with various government agencies, state disaster management authorities, and other stakeholders to ensure effective implementation of disaster management strategies across the country.</li>
+<li><strong>Training and Capacity Building:</strong><br>
+The NDMA conducts training programs and workshops to build the capacity of disaster management professionals, volunteers, and community members, enhancing their ability to respond effectively during emergencies.</li>
+<li><strong>Awareness and Education:</strong><br>
+The NDMA raises awareness about disaster risks and promotes education on disaster preparedness and response through campaigns, public service announcements, and community outreach programs.</li>
+<li><strong>Resource Allocation:</strong><br>
+During disasters, the NDMA oversees the allocation of resources, including financial aid, relief materials, and technical support, to affected regions to facilitate recovery efforts.</li>
+<li><strong>Early Warning Systems:</strong><br>
+The NDMA facilitates the development and implementation of early warning systems to provide timely information about impending disasters, allowing communities to take necessary precautions and reduce the impact of disasters.</li>
+</ol>
+<p><span style="color:blue;"><strong>Conclusion:</strong></span><br>
+The NDMA plays a vital role in disaster management by providing leadership, coordination, and support for disaster preparedness, response, and recovery efforts. Through its various initiatives and programs, the NDMA helps build resilient communities and enhances the overall effectiveness of disaster management in the country.</p>
+</li>
 </ul>
+
+
 `
 };
