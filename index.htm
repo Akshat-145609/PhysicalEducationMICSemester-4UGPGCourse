@@ -234,7 +234,7 @@
 <!-- PERFORMANCE -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <script>
-/* Call above function after each 8 seconds */
+/* Call above function after each 1 second */
 
 setInterval(() => {
   const url = new URL(window.location.href);
@@ -248,11 +248,10 @@ setInterval(() => {
     // Remove 'index.htm' if present
     cleanURL = cleanURL.replace(/index\.htm$/, "");
 
-    // Redirect silently
-    window.location.replace(cleanURL);
+    // Silently change the URL without reload
+    window.history.replaceState({}, document.title, cleanURL);
   }
 }, 1000);
-
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
